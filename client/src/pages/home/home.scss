@@ -1,0 +1,18 @@
+.home {
+    padding:  50px;
+    display: flex;
+    justify-content: center;
+
+    .container {
+        .my-masonry-grid {
+            display: flex;
+            width: auto;
+        }
+
+        .my-masonry-grid_column {
+            padding-left: 30px;
+            /* gutter size */
+            background-clip: padding-box;
+        }
+    }
+}
