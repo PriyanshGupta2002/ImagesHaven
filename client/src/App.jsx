@@ -3,7 +3,6 @@ import Login from './pages/login/Login'
 import './app.scss'
 import { createBrowserRouter,Routes,Route, Outlet, RouterProvider } from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
-import Sidebar from './components/sidebar/Sidebar'
 import Home from './pages/home/Home'
 import Profile from './pages/profile/Profile'
 import Register from './pages/register/Register'
@@ -15,14 +14,11 @@ import Add from './pages/uploadImage/Add'
 const App = () => {
   const Layout=()=>{
     return (
-    <div className='main'>
+      <>
       <Navbar/>
-      <div className='content'>
-      <Sidebar/>
       <Outlet/>
-      </div>
-  
-    </div>
+      </>
+ 
   )}
   
   const router =createBrowserRouter([

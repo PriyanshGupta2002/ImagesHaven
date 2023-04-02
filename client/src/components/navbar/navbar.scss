@@ -1,35 +1,43 @@
-.navbar{
+.navbar {
     padding: 20px;
     display: flex;
     justify-content: center;
-    background-color:#9370DB;
     position: sticky;
+    display: flex;
+    background-color: #9370DB;
+    flex-direction: column;
+    
     top: 0px;
     z-index: 999;
-    
-    .container{
-        width: 1400px;
+
+    .container {
+        max-width: 1400px;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        .logo{
-            font-size:20px;
+
+        .logo {
+            font-size: 20px;
             color: white;
             font-weight: 600;
         }
-        .search{
+
+        .search {
             display: flex;
             align-items: center;
             gap: 12px;
             width: 600px;
-            input{
+
+            input {
                 outline: none;
                 padding: 10px;
                 border: none;
                 width: 100%;
                 border-radius: 10px;
             }
-            button{
+
+            button {
                 padding: 10px 15px;
                 border-radius: 10px;
                 cursor: pointer;
@@ -42,27 +50,31 @@
             }
         }
 
-        .profile{
+        .profile {
             display: flex;
             align-items: center;
             gap: 20px;
-            .user{
+
+            .user {
                 display: flex;
                 gap: 12px;
                 align-items: center;
-                img{
+
+                img {
                     width: 30px;
                     height: 30px;
                     object-fit: cover;
                     border-radius: 50%;
                 }
-                span{
+
+                span {
                     font-size: 15px;
                     font-weight: 400;
                     color: white;
                 }
             }
-            button{
+
+            button {
                 border: 1px solid #E6E6FA;
                 color: black;
                 padding: 5px 10px;
@@ -74,7 +86,8 @@
                 outline: none;
             }
         }
-        .registerBtn{
+
+        .registerBtn {
             border: 1px solid #E6E6FA;
             color: black;
             padding: 10px 20px;
@@ -83,7 +96,8 @@
             font-size: 14px;
             font-weight: 500;
             border: none;
-            outline:none;
+            outline: none;
         }
     }
+
 }

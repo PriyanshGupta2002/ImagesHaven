@@ -1,17 +1,16 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './navbar.scss'
 import { getCurrentUser } from '../../constants/user'
+import { wallpapers } from '../../constants/categories'
 const Navbar = () => {
   const currentUser = getCurrentUser()
   const Inputref = useRef()
-  
+  const [category, setCategory] = useState("")
   return (
     <nav className='navbar'>
       <div className="container">
-
-       
-          <Link className='link logo'>
+          <Link to="/" className='link logo'>
               ImageHaven
           </Link>
       

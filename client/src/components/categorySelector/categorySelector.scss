@@ -1,27 +1,11 @@
-.sidebar{
-padding: 20px;
-display: flex;
-justify-content: center;
-overflow-y: scroll;
-width: 250px;
-position: sticky;
-top: 80px;
-height: calc(100% - 80px);
-z-index: 0;
-
-.container{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 10px 0px;
-    h1{
-        color: lightgray;
-        
-    }
-    .catItems{
+.selector{
+    padding: 20px;
+    .container{
         display: flex;
-        flex-direction: column;
-        gap: 12px;
+        align-items: center;
+        gap: 10px;
+        overflow: auto;
+        // scroll-behavior: smooth; 
         .item{
             display: flex;
             align-items: center;
@@ -51,5 +35,4 @@ z-index: 0;
             }   
         }
     }
-}
 }

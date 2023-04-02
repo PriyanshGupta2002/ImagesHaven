@@ -1,7 +1,7 @@
 export const getCurrentUser = ()=>{
     return {
         id:"1",
-        name:"Nigga",
+        name:"John Doe",
         pp:"/img/profileImage.jpg"
     }
 }

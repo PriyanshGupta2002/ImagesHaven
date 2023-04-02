@@ -1,5 +1,6 @@
 .card{
     position: relative;
+    width: 280px;
     a{
        .downBtn{
         position: absolute;
@@ -15,6 +16,6 @@
        }
     }
     img{
-        width: 300px;
-    }
+        width: 100%
+        }
 }
