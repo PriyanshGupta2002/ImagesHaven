@@ -1,0 +1,28 @@
+.userProfile{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        hr{
+            margin-top: 16px;
+            border: 1px solid #E6E6FA;
+        }
+        .userMadePosts{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 14px 0px;
+            span{
+                display: flex;
+                align-items: center;
+                font-size: 30px;
+                gap: 10px;
+            }
+        }
+    }
+}

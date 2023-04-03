@@ -3,6 +3,8 @@ import './imageDetail.scss'
 import { useParams } from 'react-router-dom'
 import { imagesArray } from '../../constants/images'
 import {AiFillTags} from 'react-icons/ai'
+import Comments from '../../components/comments/Comments'
+import AddComment from '../../components/addComment/AddComment'
 const ImageDetail = () => {
   const[detail,setDetail]=useState({})
   const{id}  = useParams()
@@ -18,7 +20,8 @@ const ImageDetail = () => {
           <div className="right">
             <div className="owner">
             <h1 >{detail?.title}</h1>
-            <span >By-{detail?.owner}</span>
+            <span >By- {detail?.owner}</span>
+            <span>Country- {detail?.country}</span>
             </div>
             <div className="tags">
                   <span>Tags <AiFillTags/></span>
@@ -30,10 +33,6 @@ const ImageDetail = () => {
                     ))}
                   </div>
             </div>
-{/* 
-            <span className='cat'>
-              {detail.category}
-            </span> */}
 
             <p>
               {detail?.description}
@@ -41,6 +40,14 @@ const ImageDetail = () => {
 
 
           </div>
+      </div>
+
+      <div className="commentSection">
+        <h1>
+          Comments
+        </h1>
+        <Comments/>
+        <AddComment/>
       </div>
     </div>
   )

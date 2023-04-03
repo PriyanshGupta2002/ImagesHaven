@@ -1,0 +1,44 @@
+.hero{
+    display: flex;
+  gap: 40px;
+  justify-content: space-between;
+    img{
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .aboutUser{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .username{
+            font-weight: 600;
+            font-size: 25px;
+        }
+        .tags{
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            .tag{
+                background-color: #9370DB;
+                color: white;
+                padding: 8px 10px;
+            }
+        }
+        .about{
+            font-size: 20px;
+        }
+        address{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .socials{
+        display: flex;
+        gap: 15px;
+        .social{
+            font-size: 30px;
+        }
+    }
+}

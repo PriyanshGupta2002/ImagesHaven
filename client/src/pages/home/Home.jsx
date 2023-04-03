@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './home.scss'
-import Masonry from 'react-masonry-css'
 import { imagesArray } from '../../constants/images'
-import ImageCard from '../../components/imageCard/ImageCard'
 import { useLocation } from 'react-router-dom'
 import CategorySelector from '../../components/categorySelector/CategorySelector'
+import MasonaryLayout from '../../components/masonaryLayout/MasonaryLayout'
 const Home = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
@@ -21,26 +20,12 @@ const Home = () => {
   if (!images) {
     return "Loading..."
   }
-  const myBreakpointsAndCols = {
-    default: 4,
-    3000:6,
-    2000: 5,
-    1200: 3,
-    1000: 2,
-    500:1
-  };
+  
   return (
     <div className='home'>
       <CategorySelector/>
       <div className="container">
-      <Masonry
-  breakpointCols={myBreakpointsAndCols}
-  className="my-masonry-grid"
->
-  {images?.map(item => (
-   <ImageCard item={item} key={item.id}/>
-  ))}
-</Masonry>
+<MasonaryLayout images={images}/>
       </div>
     </div>
   )

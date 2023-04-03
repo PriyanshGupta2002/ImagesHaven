@@ -6,7 +6,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Beautiful Nature",
     description: "A breathtaking view of natural landscape.",
-    tags: ["Nature", "Landscape", "Scenic"]
+    tags: ["Nature", "Landscape", "Scenic"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 2,
@@ -15,7 +17,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Cityscape at Night",
     description: "A stunning view of city skyline at night.",
-    tags: ["Cityscape", "Night", "Urban"]
+    tags: ["Cityscape", "Night", "Urban"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 3,
@@ -24,7 +28,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Colorful Abstract",
     description: "A vibrant and colorful abstract design.",
-    tags: ["Abstract", "Art", "Colorful"]
+    tags: ["Abstract", "Art", "Colorful"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 4,
@@ -33,7 +39,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Cute Animals",
     description: "A collection of adorable animal photos.",
-    tags: ["Animals", "Cute", "Pets"]
+    tags: ["Animals", "Cute", "Pets"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 5,
@@ -42,7 +50,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Majestic Universe",
     description: "A stunning view of the majestic universe.",
-    tags: ["Space", "Galaxy", "Astronomy"]
+    tags: ["Space", "Galaxy", "Astronomy"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 6,
@@ -51,7 +61,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Modern Architecture",
     description: "A stunning example of modern architectural design.",
-    tags: ["Architecture", "Modern", "Design"]
+    tags: ["Architecture", "Modern", "Design"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 7,
@@ -60,7 +72,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Delicious Food",
     description: "A mouthwatering selection of food photos.",
-    tags: ["Food", "Cuisine", "Delicious"]
+    tags: ["Food", "Cuisine", "Delicious"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 8,
@@ -69,7 +83,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Textured Background",
     description: "A beautiful textured background for your designs.",
-    tags: ["Textures", "Background", "Design"]
+    tags: ["Textures", "Background", "Design"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 9,
@@ -78,7 +94,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Elegant Patterns",
     description: "A collection of elegant and stylish patterns.",
-    tags: ["Patterns", "Design", "Stylish"]
+    tags: ["Patterns", "Design", "Stylish"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 10,
@@ -87,7 +105,9 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Exciting Sports",
     description: "A collection of exciting and dynamic sports photos.",
-    tags: ["Sports", "Action", "Dynamic"]
+    tags: ["Sports", "Action", "Dynamic"],
+    country:"USA",
+    userId:"1"
   },
   {
     id: 11,
@@ -96,6 +116,8 @@ export const imagesArray = [
     owner: "John Doe",
     title: "Anime Art",
     description: "A stunning collection of anime-inspired artwork.",
-    tags: ["Anime", "Art", "Inspiring"]
+    tags: ["Anime", "Art", "Inspiring"],
+    country:"USA",
+    userId:"1"
   }
 ];
