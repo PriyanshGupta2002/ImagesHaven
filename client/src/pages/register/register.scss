@@ -1,0 +1,118 @@
+@mixin btnStyle{
+    transition: all 0.3s linear;
+    border: 1px solid #9370DB;
+    border-radius: 10px;
+    &:hover {
+        background-color: transparent;
+        color: black;
+        border: 1px solid #e6e6fa;
+    }
+}
+.register{
+   padding: 50px;
+
+   .formGrp{
+    border:1px solid #E6E6FA;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .left{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+        .formItem{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            label{
+                font-weight: 500;
+                color: gray;
+            }
+            input{
+                width: 100%;
+                padding: 20px;
+                border: 1px solid #E6E6FA;
+                outline: none;
+                &:focus{
+                    border: 1px solid #9370DB ;
+                }
+            }
+            button{
+                padding: 10px;
+                background-color: #9370DB;
+                border: none;
+                border-radius: 10px;
+                outline: none;
+            
+                @include btnStyle();
+                color: white;
+                width: max-content;
+                cursor: pointer;
+            }
+        }
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex: 1;
+        .formItem{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            label{
+                font-weight: 500;
+                color: gray;
+            }
+            input{
+                padding: 20px;
+                width: 100%;
+                border: 1px solid #E6E6FA;
+              
+                outline: none;
+                &:focus{
+                    border: 1px solid #9370DB ;
+                }
+            }
+            textarea{
+                border: none;
+                outline: none;
+                border: 1px solid #E6E6FA;
+                padding: 10px;
+                &:focus{
+                    border: 1px solid #9370DB ;
+                }
+            }
+         
+            button{
+                padding: 10px;
+                background-color: #9370DB;
+                border: none;
+                outline: none;
+                @include btnStyle();
+
+                color: white;
+                width: max-content;
+                cursor: pointer;
+            }
+        }
+        button{
+            padding: 10px;
+            background-color: #9370DB;
+            border: none;
+            outline: none;
+
+            @include btnStyle();
+            color: white;
+            cursor: pointer;
+        }
+    }
+   }
+}

@@ -41,7 +41,9 @@ const Profile = () => {
     ],
     about:"I am a developer",
     address:"Boston,MA,UnitedStates",
-    pp:"/img/profileImage.jpg"
+    pp:"/img/profileImage.jpg",
+    email:"dharmesh@gmail.com",
+    
   }
   return (
     <div className='userProfile'>

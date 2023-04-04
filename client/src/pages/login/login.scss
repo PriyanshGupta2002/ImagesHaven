@@ -1,0 +1,60 @@
+@mixin btnStyle{
+    transition: all 0.3s linear;
+    border: 1px solid #9370DB;
+    border-radius: 10px;
+    &:hover {
+        background-color: transparent;
+        color: black;
+        border: 1px solid #e6e6fa;
+    }
+}
+.login{
+    display: flex;
+  justify-content: center;
+    .container{
+        width: 1400px;
+        padding: 70px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 30px;
+            width: 40%;
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            .formItem{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                label{
+                    font-size: 20px;
+                    color: gray;
+                }
+                input{
+                    padding: 20px;
+                    outline: none;
+                    border: 1px solid #E6E6FA;
+                 
+                        &:focus{
+                            border: 1px solid #9370DB ;
+                        }
+                    
+                }
+            }
+            button{
+                background-color: #9370DB;
+                color: white;
+                padding: 20px;
+                outline: none;
+                font-size: 18px;
+                font-weight: 500;
+                border: none;
+                @include btnStyle();
+                cursor: pointer;
+            }
+        }
+    }
+}

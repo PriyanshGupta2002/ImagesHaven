@@ -7,6 +7,10 @@
         height: 250px;
         object-fit: cover;
         border-radius: 50%;
+        transition: transform 0.3s linear;
+        &:hover{
+            transform: scale(1.2);
+        }
     }
     .aboutUser{
         display: flex;
@@ -37,8 +41,10 @@
     .socials{
         display: flex;
         gap: 15px;
-        .social{
-            font-size: 30px;
-        }
+       
+            
+            .social{
+                font-size: 30px;
+            }
     }
 }

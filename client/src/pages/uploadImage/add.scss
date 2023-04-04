@@ -1,0 +1,110 @@
+@mixin btnStyle {
+    background-color: #9370DB;
+    font-size: 15px;
+    font-weight: bold;
+    border: 1px solid #9370DB;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    transition: all 0.3s linear;
+
+    &:hover {
+        background-color: transparent;
+        color: black;
+        border: 1px solid #e6e6fa;
+    }
+}
+
+.addUpload {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: 1400px;
+        padding: 50px 0px;
+        display: flex;
+        justify-content: center;
+
+        form {
+            display: flex;
+            gap: 20px;
+            width: 70%;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border-radius: 10px;
+
+            .left {
+                flex: 1;
+                height: 100%;
+                border: 7px dashed lightgray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #dee2e6;
+
+                label {
+                    color: gray;
+                    font-size: 20px;
+                }
+            }
+
+            .right {
+                flex: 1;
+                display: flex;
+                padding: 20px;
+                flex-direction: column;
+                gap: 20px;
+
+                .rItem {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    label {
+                        font-size: 20px;
+                        color: #adb5bd;
+                        font-weight: 500;
+                    }
+
+                    input {
+                        padding: 20px;
+                        border: 1px solid #E6E6FA;
+                        outline: none;
+
+                        &:focus {
+                            border: 1px solid #9370DB;
+                        }
+                    }
+
+                    select {
+                        padding: 10px;
+                        outline: none;
+                        font-size: 17px;
+                        border: 1px solid #e6e6fa;
+
+                        &:focus {
+                            border: 1px solid #9370DB;
+                        }
+
+                        option {
+                            outline: none;
+                            border: 1px solid #e6e6fa;
+                            font-size: 17px;
+                        }
+                    }
+
+                    button {
+                        @include btnStyle();
+                        width: max-content;
+
+                    }
+                }
+
+                button {
+                    @include btnStyle();
+                }
+            }
+        }
+    }
+}

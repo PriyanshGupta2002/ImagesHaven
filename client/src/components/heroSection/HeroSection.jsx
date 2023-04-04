@@ -21,8 +21,8 @@ const HeroSection = ({user}) => {
         <address> <RxSewingPinFilled/>{user.address}</address>
       </div>
       <div className="socials">
-          {user.socials.map((social)=>(
-            <Link to={social.url} className='link'>
+          {user.socials.map((social,idx)=>(
+            <Link to={social.url} className='link' key={idx}>
             <span className='social'>{social.icon}</span>
             </Link>
           ))}

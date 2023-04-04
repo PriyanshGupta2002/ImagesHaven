@@ -1,6 +1,10 @@
 .card{
     position: relative;
     width: 280px;
+    transition: transform 0.3s ease-in-out;
+    &:hover{
+        transform: scale(1.2);
+    }
     a{
        .downBtn{
         position: absolute;
