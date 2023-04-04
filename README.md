@@ -12,3 +12,12 @@
 
 #ImageDetailPage
 ![screencapture-localhost-5173-image-detail-1-2023-04-03-17_29_30](https://user-images.githubusercontent.com/86533169/229502876-94058f1e-3f86-4362-abc0-b578fb67c2ac.png)
+
+#RegisterPage
+![screencapture-localhost-5173-register-2023-04-04-19_00_43](https://user-images.githubusercontent.com/86533169/229809253-b5db0b41-44d2-4b09-856b-caedaa2ad73c.png)
+
+#LoginPage
+![screencapture-localhost-5173-login-2023-04-04-19_00_01](https://user-images.githubusercontent.com/86533169/229809303-b452ea53-3df7-47be-8712-01b875835e1e.png)
+
+#ImageUploadPage
+![screencapture-localhost-5173-addImage-2023-04-04-19_00_10](https://user-images.githubusercontent.com/86533169/229809356-a76ed589-61e9-413c-ad7e-f6a923dc0570.png)
