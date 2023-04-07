@@ -23,6 +23,8 @@ const CategorySelector = () => {
             </div>
             </Link>
           ))}
+         
+          
         </div>
     </div>
   )

@@ -1,15 +1,19 @@
 .selector{
     padding: 20px;
+    --spacer:1rem;
     .container{
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        overflow: auto;
+        display: grid;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+        gap: var(--spacer);
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
         // scroll-behavior: smooth; 
         .item{
-            display: flex;
+            display: grid;
+            grid-auto-flow: column;
             align-items: center;
-            gap: 10px;
+            gap: var(--spacer);
             padding: 10px 20px;
             border-radius: 30px;
             cursor: pointer;
