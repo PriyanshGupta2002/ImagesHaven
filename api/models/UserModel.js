@@ -28,6 +28,14 @@ const userSchema = new Schema({
     address:{
         type:"String",
         required:true
+    },
+    followers:{
+        type:[String],
+        default:[]
+    },
+    following:{
+        type:[String],
+        default:[]
     }
 },{timestamps:true})
 

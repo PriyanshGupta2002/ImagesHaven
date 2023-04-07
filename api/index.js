@@ -2,7 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import mongoose from 'mongoose'
-import {authRoute,userRoute,imageRoute} from './routes/index.js'
+import {authRoute,userRoute,imageRoute,commentRoute} from './routes/index.js'
 import cookieParser from 'cookie-parser'
 const app = express()
 dotenv.config()
@@ -26,6 +26,7 @@ const connect=async()=>{
 app.use('/api/auth',authRoute)
 app.use('/api/user',userRoute)
 app.use('/api/image',imageRoute)
+app.use('/api/comment',commentRoute)
 
 
 app.use((err,req,res,next)=>{

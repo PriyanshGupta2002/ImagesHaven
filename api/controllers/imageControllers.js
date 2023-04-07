@@ -15,7 +15,8 @@ export const getAllPosts=async(req,res,next)=>{
     const q = req.query
     const filters={
         ...(q.cat && {cat:q.cat}),
-        ...(q.search && {title:{$regex:q.search,$options:"i"}})
+        ...(q.search && {title:{$regex:q.search,$options:"i"}}),
+        ...(q.likedBy && {likedBy:q.likedBy})
     }
     try {
         const imagePosts = await Image.find(filters).sort({updatedAt:-1})
@@ -46,7 +47,7 @@ export const likeDislikePost=async(req,res,next)=>{
             res.status(201).send("Post Liked Successfully")
         }else{
             await Image.findByIdAndUpdate(imgId,{$pull:{likedBy:req.userId}})
-            res.staus(201).send("Post Disliked Successfully")
+            res.status(201).send("Post Disliked Successfully")
         }
     } catch (error) {
         next(error)
