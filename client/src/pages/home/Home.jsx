@@ -1,22 +1,36 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './home.scss'
-import { imagesArray } from '../../constants/images'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
+import Cookies from 'js-cookie'
+
 import CategorySelector from '../../components/categorySelector/CategorySelector'
 import MasonaryLayout from '../../components/masonaryLayout/MasonaryLayout'
+import { useQuery } from '@tanstack/react-query'
+import newRequest from '../../utils/newRequest'
 const Home = () => {
   const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const cat = params.get('cat'); 
-  const [images, setImages] = useState([])
-  useEffect(() => {
-    if (!cat) {
-      setImages(imagesArray)
-    }else{
-      setImages(imagesArray.filter((img)=>img.category===cat))
-    }
-  }, [cat])
+  const params = location.search;
+  const navigate = useNavigate()
+  const accessToken = Cookies.get('accessToken')
 
+  
+  const {data,isLoading,refetch,isError} = useQuery({ queryKey: ['imagesPost'], queryFn: ()=>newRequest.get(`/image/getImagePosts${params}`) })
+  const images = data?.data
+
+  useEffect(() => {
+   
+      refetch()
+    
+  }, [params])
+  
+
+  useEffect(() => {
+    if (!accessToken) {
+      localStorage.setItem('currentUser',null)
+      navigate('/login')
+    }
+  }, [accessToken])
+  
   if (!images) {
     return "Loading..."
   }
@@ -25,7 +39,7 @@ const Home = () => {
     <div className='home'>
       <CategorySelector/>
       <div className="container">
-<MasonaryLayout images={images}/>
+<MasonaryLayout images={images} refetch={refetch} isError={isError} isLoading={isLoading} />
       </div>
     </div>
   )

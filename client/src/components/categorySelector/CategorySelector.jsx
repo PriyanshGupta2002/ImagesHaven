@@ -6,10 +6,12 @@ import { Link, useLocation } from 'react-router-dom'
 const CategorySelector = () => {
     const [category, setCategory] = useState("")
     const {search} = useLocation()
+    
     useEffect(() => {
      if (!search) {
         setCategory("")
      }
+     setCategory(search.substring(5))
     }, [search])
     
   return (

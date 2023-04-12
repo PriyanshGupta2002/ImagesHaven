@@ -10,7 +10,7 @@ const ImageCard = ({item}) => {
                 Download
             </button>
         </a>
-       <Link to={`/image-detail/${item.id}`}>
+       <Link to={`/image-detail/${item._id}`}>
        <img src={item.image} alt="" />
        </Link> 
     </div>

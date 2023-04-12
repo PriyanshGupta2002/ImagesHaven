@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './masonaryLayout.scss'
 import Masonry from 'react-masonry-css';
 import ImageCard from '../imageCard/ImageCard';
 import { useLocation } from 'react-router-dom';
-const MasonaryLayout = ({images}) => {
+const MasonaryLayout = ({images,isLoading,isError,refetch}) => {
   
     const myBreakpointsAndCols = {
         default: 4,
@@ -14,7 +14,10 @@ const MasonaryLayout = ({images}) => {
         500:1
       };
       const location = useLocation()
-      const pathName= location.pathname
+      useEffect(() => {
+          refetch()
+      }, [images])
+      
   return (
     <Masonry
   breakpointCols={myBreakpointsAndCols}
@@ -22,9 +25,9 @@ const MasonaryLayout = ({images}) => {
   columnClassName="my-masonry-grid_column"
   
 >
-  {images?.map(item => (
-   <ImageCard item={item} key={item.id}/>
-  ))}
+  {isLoading?"Loading":isError?"Some Error Occured":images.length>0? images?.map(item => (
+   <ImageCard item={item} key={item._id}/>
+  )): <span className='no-cat-img'>No Images found for the selected category</span> }
 </Masonry>
   )
 }

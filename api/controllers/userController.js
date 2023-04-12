@@ -25,12 +25,12 @@ export const followUnfollowUser=async(req,res,next)=>{
         if (!hasUserAlreadyFollowed) {
             await User.findByIdAndUpdate(userId,{$push:{followers:req.userId}})
             await User.findByIdAndUpdate(req.userId,{$push:{following:userId}})
-            return res.status(201).send("You have successfully followed")
+            return res.status(201).send({"message":"You have successfully followed","hasFollowed":"true"})
         }
         await User.findByIdAndUpdate(userId,{$pull:{followers:req.userId}})
         await User.findByIdAndUpdate(req.userId,{$pull:{following:userId}})
-         res.status(201).send("You have successfully unfollowed")
+         res.status(201).send({"message":"You have successfully unfollowed","hasFollowed":"false"})
     } catch (error) {
-        next(error)
+        return res.status(501).send("Internal Sever Error")
     }
 }

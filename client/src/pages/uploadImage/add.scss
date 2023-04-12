@@ -15,6 +15,17 @@
     }
 }
 
+@mixin tagStyle{
+    transition: all 0.3s linear;
+    border: 1px solid #9370DB;
+    border-radius: 10px;
+    &:hover {
+        background-color: transparent;
+        color: black;
+        border: 1px solid #e6e6fa;
+    }
+}
+
 .addUpload {
     display: flex;
     justify-content: center;
@@ -25,7 +36,7 @@
         display: flex;
         justify-content: center;
 
-        form {
+        .form {
             display: flex;
             gap: 20px;
             width: 70%;
@@ -36,16 +47,47 @@
 
             .left {
                 flex: 1;
-                height: 100%;
+                height: 98%;
                 border: 7px dashed lightgray;
                 display: flex;
+                flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                position: relative;
                 background-color: #dee2e6;
 
                 label {
                     color: gray;
                     font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                   width: 100%;
+                   height: 100%;
+                   text-align: center;
+                }
+                .icon-upload{
+                    color: gray;
+                    font-size: 30px;
+                    position: absolute;
+                    bottom: 230px;
+                }
+                .close{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    font-size: 30px;
+                    cursor: pointer;
+                    background-color:black;
+                    color: white;
+                    border-radius: 50%;
+
+                }
+                .uploadedFile{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    
                 }
             }
 
@@ -76,6 +118,20 @@
                             border: 1px solid #9370DB;
                         }
                     }
+                    
+                    .tags{
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        .tag{
+                          padding: 10px 20px;
+                         background-color: #9370DB;
+                         color: white;
+                         cursor: pointer;
+                         @include tagStyle();
+                         
+                        }
+                     }
 
                     select {
                         padding: 10px;
@@ -103,6 +159,15 @@
 
                 button {
                     @include btnStyle();
+                    &.currentlyUploading{
+                        background-color: gray;
+                        color: white;
+                    }
+                }
+                .errorOccured{
+                    color: red;
+                    text-align: center;
+                    font-size: 14px;
                 }
             }
         }

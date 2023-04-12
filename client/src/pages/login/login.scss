@@ -54,6 +54,19 @@
                 border: none;
                 @include btnStyle();
                 cursor: pointer;
+                &.logging{
+                    background-color: gray;
+                color: white;
+                }
+            }
+            span{
+                font-weight: 300;
+               
+            }
+            .error{
+                color: red;
+                text-align: center;
+                font-size: 14px;
             }
         }
     }

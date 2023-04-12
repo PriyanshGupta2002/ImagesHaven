@@ -8,7 +8,7 @@ export const imagesArray = [
     description: "A breathtaking view of natural landscape.",
     tags: ["Nature", "Landscape", "Scenic"],
     country:"USA",
-    userId:"1"
+    userId:"642ecf86c1c28cc834444291"
   },
   {
     id: 2,

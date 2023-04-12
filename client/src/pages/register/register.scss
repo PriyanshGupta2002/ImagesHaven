@@ -17,7 +17,7 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     padding: 20px;
-    gap: 30px;
+    gap: 4rem;
     width: 80%;
     margin: auto;
     flex-wrap: wrap;
@@ -56,6 +56,7 @@
                 width: max-content;
                 cursor: pointer;
             }
+           
         }
     }
     .right{
@@ -73,7 +74,7 @@
             }
             input{
                 padding: 20px;
-                width: 100%;
+           
                 border: 1px solid #E6E6FA;
               
                 outline: none;
@@ -102,6 +103,18 @@
                 width: max-content;
                 cursor: pointer;
             }
+             .tags{
+               display: flex;
+               align-items: center;
+               gap: 10px;
+               .tag{
+                 padding: 10px 20px;
+                background-color: #9370DB;
+                color: white;
+                @include btnStyle();
+                
+               }
+            }
         }
         button{
             padding: 10px;
@@ -112,6 +125,10 @@
             @include btnStyle();
             color: white;
             cursor: pointer;
+            &.submitting{
+                background-color: gray;
+                color: white;
+            }
         }
     }
    }

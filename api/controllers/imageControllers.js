@@ -14,9 +14,10 @@ export const createPostImage=async(req,res,next)=>{
 export const getAllPosts=async(req,res,next)=>{
     const q = req.query
     const filters={
-        ...(q.cat && {cat:q.cat}),
+        ...(q.cat && {cat:{$regex:q.cat,$options:"i"}}),
         ...(q.search && {title:{$regex:q.search,$options:"i"}}),
-        ...(q.likedBy && {likedBy:q.likedBy})
+        ...(q.likedBy && {likedBy:q.likedBy}),
+        ...(q.userId && {userId:q.userId})
     }
     try {
         const imagePosts = await Image.find(filters).sort({updatedAt:-1})
@@ -44,10 +45,10 @@ export const likeDislikePost=async(req,res,next)=>{
         const postImage = await Image.findById(imgId)
         if(!postImage.likedBy.includes(req.userId)){
             await Image.findByIdAndUpdate(imgId,{$push:{likedBy:req.userId}})
-            res.status(201).send("Post Liked Successfully")
+            res.status(201).send({"message":"Post liked","postLiked":true})
         }else{
             await Image.findByIdAndUpdate(imgId,{$pull:{likedBy:req.userId}})
-            res.status(201).send("Post Disliked Successfully")
+            res.status(201).send({"message":"Post disliked","postLiked":false})
         }
     } catch (error) {
         next(error)

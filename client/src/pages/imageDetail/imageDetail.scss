@@ -66,6 +66,19 @@
                 font-weight: 500;
 
             }
+            .likedBy{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                span{
+                    font-size: 20px;
+                }
+                .heart{
+                    font-size: 30px;
+                    cursor: pointer;
+                    color: red;
+                }
+            }
 
         }
     }
