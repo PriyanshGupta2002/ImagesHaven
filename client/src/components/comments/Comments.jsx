@@ -1,14 +1,22 @@
 import React from 'react'
 import './comments.scss'
-import { commentData } from '../../constants/commentData'
 import Comment from '../comment/Comment'
-const Comments = () => {
+import newRequest from '../../utils/newRequest'
+import { useQuery } from '@tanstack/react-query'
+const Comments = ({postImageId}) => {
+  const { data, isLoading, isError,refetch } = useQuery({
+    queryKey: ["comments",postImageId],
+    queryFn: () => newRequest.get(`comment/${postImageId}`),
+  });
+  const commentData = data?.data
+ 
   return (
     <div className='comments'>
-        {commentData.map((comment)=>(
-          <Comment key={comment.userId} item={comment}/>
+        {isLoading ?"Loading...":isError?"Something went wrong! Please try again":commentData?.length<=0?<span className='noComment'>No Comments Yet!</span>:commentData.map((comment)=>(
+          <Comment key={comment._id} item={comment}/>
         ))}
-    </div>
+        </div>
+    
   )
 }
 

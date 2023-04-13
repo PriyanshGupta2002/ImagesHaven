@@ -7,7 +7,7 @@
     .user{
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 2rem;
         img{
             width: 35px;
             height: 35px;
@@ -24,6 +24,26 @@
             .time{
                 font-weight: 400;
             }
+        }
+        .delete{
+            font-size: 30px;
+            color: red;
+            margin-left: auto;
+            cursor: pointer;
+        }
+        
+    }
+    .likedBy{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span{
+            font-size: 20px;
+        }
+        .heart{
+            font-size: 30px;
+            cursor: pointer;
+            color: red;
         }
     }
 }

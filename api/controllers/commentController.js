@@ -4,7 +4,7 @@ import { createError } from "../utils/createError.js"
 export const getCommentsForAPostImage=async(req,res,next)=>{
     const postImageId = req.params.id
     try {
-        const comments = await Comment.find({postImageId})
+        const comments = await Comment.find({postImageId}).sort({updatedAt:-1})
         res.status(201).send(comments)
     } catch (error) {
         next(error)

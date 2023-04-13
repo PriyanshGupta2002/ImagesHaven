@@ -92,8 +92,8 @@ const ImageDetail = () => {
 
       <div className="commentSection">
         <h1>Comments</h1>
-        <Comments />
-        <AddComment />
+        <Comments postImageId={id} />
+        <AddComment postImageId={id} />
       </div>
     </div>
   );

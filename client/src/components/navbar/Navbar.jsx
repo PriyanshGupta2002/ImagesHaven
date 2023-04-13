@@ -30,10 +30,10 @@ const Navbar = () => {
               ImageHaven
           </Link>
       
-        <div className='search'>
+      {currentUser &&  <div className='search'>
           <input type="text" placeholder='Search your favourite wallpapers...' ref={Inputref} />
           <button onClick={handleFind}>Find</button>
-        </div>
+        </div>}
 
         {currentUser ?(<div className="profile">
           <Link to={`/profile/${currentUser._id}`} className='link'>
